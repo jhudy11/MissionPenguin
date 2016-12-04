@@ -15,6 +15,10 @@
 		49530E0E1DEF3E1300C8841C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49530E0C1DEF3E1300C8841C /* Main.storyboard */; };
 		49530E101DEF3E1300C8841C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49530E0F1DEF3E1300C8841C /* Assets.xcassets */; };
 		49530E131DEF3E1300C8841C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49530E111DEF3E1300C8841C /* LaunchScreen.storyboard */; };
+		49530E1B1DEF837A00C8841C /* theBoldFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49530E1A1DEF837A00C8841C /* theBoldFont.ttf */; };
+		497CDDFA1DEFC7A100B804E7 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497CDDF91DEFC7A100B804E7 /* GameOverScene.swift */; };
+		497CDDFC1DEFDE4100B804E7 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497CDDFB1DEFDE4100B804E7 /* MainMenuScene.swift */; };
+		497CDE061DF4974700B804E7 /* GameCreditsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497CDE051DF4974700B804E7 /* GameCreditsScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		49530E0F1DEF3E1300C8841C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49530E121DEF3E1300C8841C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49530E141DEF3E1300C8841C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49530E1A1DEF837A00C8841C /* theBoldFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = theBoldFont.ttf; sourceTree = "<group>"; };
+		497CDDF91DEFC7A100B804E7 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		497CDDFB1DEFDE4100B804E7 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		497CDE051DF4974700B804E7 /* GameCreditsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameCreditsScene.swift; path = ../GameCreditsScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +72,14 @@
 				49530E041DEF3E1300C8841C /* GameScene.sks */,
 				49530E061DEF3E1300C8841C /* Actions.sks */,
 				49530E081DEF3E1300C8841C /* GameScene.swift */,
+				497CDDFB1DEFDE4100B804E7 /* MainMenuScene.swift */,
+				497CDDF91DEFC7A100B804E7 /* GameOverScene.swift */,
+				497CDE051DF4974700B804E7 /* GameCreditsScene.swift */,
 				49530E0A1DEF3E1300C8841C /* GameViewController.swift */,
 				49530E0C1DEF3E1300C8841C /* Main.storyboard */,
 				49530E0F1DEF3E1300C8841C /* Assets.xcassets */,
 				49530E111DEF3E1300C8841C /* LaunchScreen.storyboard */,
+				49530E1A1DEF837A00C8841C /* theBoldFont.ttf */,
 				49530E141DEF3E1300C8841C /* Info.plist */,
 			);
 			path = soloMission;
@@ -135,6 +147,7 @@
 			files = (
 				49530E0E1DEF3E1300C8841C /* Main.storyboard in Resources */,
 				49530E051DEF3E1300C8841C /* GameScene.sks in Resources */,
+				49530E1B1DEF837A00C8841C /* theBoldFont.ttf in Resources */,
 				49530E101DEF3E1300C8841C /* Assets.xcassets in Resources */,
 				49530E131DEF3E1300C8841C /* LaunchScreen.storyboard in Resources */,
 				49530E071DEF3E1300C8841C /* Actions.sks in Resources */,
@@ -148,8 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497CDDFC1DEFDE4100B804E7 /* MainMenuScene.swift in Sources */,
 				49530E091DEF3E1300C8841C /* GameScene.swift in Sources */,
 				49530E0B1DEF3E1300C8841C /* GameViewController.swift in Sources */,
+				497CDE061DF4974700B804E7 /* GameCreditsScene.swift in Sources */,
+				497CDDFA1DEFC7A100B804E7 /* GameOverScene.swift in Sources */,
 				49530E031DEF3E1300C8841C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,10 +291,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FV58CK5TAD;
 				INFOPLIST_FILE = soloMission/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ParanoidPenguinProductions.soloMission;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -288,10 +306,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FV58CK5TAD;
 				INFOPLIST_FILE = soloMission/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ParanoidPenguinProductions.soloMission;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -314,6 +334,7 @@
 				49530E191DEF3E1300C8841C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
